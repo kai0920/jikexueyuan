@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>高级前端开发工程师面试题</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>高级前端开发工程师面试题</h1>
+
+        <div class="menu">
+            <span class="menu-item" data-article="html-box">HTML</span>
+            <span class="menu-item" data-article="css-box">CSS</span>
+            <span class="menu-item menu-item-active" data-article="js-box">JS</span>
+        </div>
+
+        <article class="html-box">
+            <div class="title">1.对WEB标准以及W3C的理解与认识</div>
+            <div class="content">
+                标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；
+            </div>
+
+            <div class="title">2.doctype（文档类型）的作用是什么?</div>
+            <div class="content">
+                <p>位于html标签最前面，告诉浏览器以那种html和xhtml规范。分为标准模式和怪异模式、基于框架的HTML模式。假如浏览器不以doctype标准模式编写DTD，页面除了无法通过代码检验之外，还无法在浏览器中正确显示。</p>
+                <p>a.如果需要干净的标记，免于表现层的混乱，用XHTML Strict DTD类型</p>
+                <p>b.Transitional DTD 可包含 W3C 所期望移入样式表的呈现属性和元素。如果用户使用了不支持层叠样式表（CSS）的浏览器以至于你不得不使用 HTML 的呈现特性时，用Transitional DTD 类型。</p>
+                <p>c.Frameset DTD 被用于带有框架的文档。除 frameset 元素取代了 body 元素之外，Frameset DTD 等同于 Transitional DTD</p>
+            </div>
+
+            <div class="title">3.浏览器标准模式和怪异模式之间的区别是什么?</div>
+            <div class="content">
+                <p>当浏览器厂商开始创建与标准兼容的浏览器时，他们希望确保向后兼容性。为了实现这一目的，他们创建了两种呈现模式，标准和混杂模式。在标准模式中，浏览器会根据规范呈现页面；在混杂模式中。页面会以一种相对宽松的向后兼容方式显示。混杂模式常用于模拟老式浏览器的行为，以防止老站点无法工作。</p>
+                <p>他们最大的不同是对盒模型的解析。IE盒子模型和标准W3C盒子模型：ie的width包括：padding\border。标准的width不包括：padding\border</p>
+                <p>使用 document.compatMode来判断浏览器的解析方式。</p>
+            </div>
+
+            <div class="title">4.data-属性的作用是什么?</div>
+            <div class="content">
+                <p>data-* 属性用于存储页面或应用程序的私有自定义数据。data-* 属性赋予我们在所有 HTML 元素上嵌入自定义 data 属性的能力。存储的（自定义）数据能够被页面的 JavaScript 中利用，以创建更好的用户体验（不进行 Ajax 调用或服务器端数据库查询）</p>
+            </div>
+
+            <div class="title">5.请描述一下cookies，sessionStorage和localStorage的区别?</div>
+            <div class="content">
+                <p>essionStorage和localStorage是HTML5 Web Storage API提供的，可以方便的在web请求之间保存数据。有了本地数据，就可以避免数据在浏览器和服务器间不必要地来回传递。sessionStorage、localStorage、cookie都是在浏览器端存储的数据，其中sessionStorage的概念很特别，引入了一个“浏览器窗口”的概念。sessionStorage是在同源的同窗口（或tab）中，始终存在的数据。也就是说只要这个浏览器窗口没有关闭，即使刷新页面或进入同源另一页面，数据仍然存在。关闭窗口后，sessionStorage即被销毁。同时“独立”打开的不同窗口，即使是同一页面，sessionStorage对象也是不同的cookies会发送到服务器端。其余两个不会。Microsoft指出InternetExplorer8增加cookie限制为每个域名50个，但IE7似乎也允许每个域名50个cookie。</p>
+            </div>
+
+            <div class="title">6.如果网页内容需要支持多语言，你会怎么做?</div>
+            <div class="content">
+                <p>下面这些问题需要考虑：</p>
+                <p>应用字符集的选择，选择UTF-8编码</p>
+                <p>语言书写习惯&导航结构</p>
+                <p>数据库驱动型网站</p>
+            </div>
+
+            <div class="title">7.什么是渐进式渲染 (progressive rendering)？</div>
+            <div class="content">
+                <p>你需要尽早将 HTML 字节给到浏览器。</p>
+                <p>页面可以庞大，不过，只要你在短时间内(最好少于 1 秒)呈现给用户一些内容，他们仍然觉得载入很快</p>
+            </div>
+
+        </article>
+
+        <article class="css-box">
+            <div class="title"> 1.清除浮动的几种方式，各自的优缺点</div>
+            <div class="content">
+                <p>1.使用空标签清除浮动 clear:both（理论上能清除任何标签，，，增加无意义的标签）</p>
+                <p> 2.使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,,使用zoom:1用于兼容IE）</p>
+                <p> 3.是用afert伪元素清除浮动(用于非IE浏览器)</p>
+            </div>
+            <div class="title"> 2.你最喜欢的图片替换方法是什么，你如何选择使用。</div>
+            <div class="content">
+                <p><strong>Fahrner Image Replacement (FIR)</strong></p>
+                <p>这是最早出现的图文替换技术，是由 Todd Fahrner 提出的，非常容易理解：</p>
+                <pre>&lt;h2&gt;&lt;span&gt;Hello World&lt;/span&gt;&lt;/h2&gt;</pre>
+                <pre>h2 {
+                 background:url(hello_world.gif) no-repeat; 
+                width: 150px; 
+                height: 35px; 
+                } 
+                span {
+                    display: none; 
+                }</pre>
+                <p>代码非常明白：先将图片应用在 H2 的背景中，然后将 SPAN 的标签隐藏。但是这种方式有个问题，就是当图片无法显示时，将导致这个区域没有任何内容。同时，使用 display:none 的方式隐藏的内容，将被许多主流屏幕阅读器忽略，从而造成可用性问题，因此，应该尽量避免使用。</p>
+                <p><strong>Phark 的方法</strong></p>
+                <pre> &lt;h2&gt; Hello World &lt;/h2&gt;</pre>
+                <pre> h2 {
+                text-indent: -5000px;
+                background:url(hello_world.gif) no-repeat;
+                width: 150px;height:35px; 
+                }</pre>
+                <p>代码也非常简单，通过文本缩进，将文字隐藏，但是，当图片无法显示时，依然存在 FIR 的问题。</p>
+                <p><strong>Gilder/Levin 的方法</strong></p>
+                <pre>  &lt;h2&gt;&lt;span&gt;&lt;/span&gt;Hello World &lt;/h2&gt;</pre>
+                <pre> h2 {
+                    width: 150px;height: 35px;
+                    position: relative; 
+                } 
+                h2 span {
+                    background: url(hello_world.gif) no-repeat; 
+                    position: absolute; 
+                    width: 100%; 
+                    height: 100%; 
+                }</pre>
+                <p>首先，将 H2 的 position 设为 relative ，这样将使 H2 里面的元素定位以 H2 为参照，然后将 SPAN 元素绝对定位，撑满整个 H2 区域，同时将背景图应用在 SPAN 标签里面；这种方法的原理是将 SPAN 标签覆盖在文字内容上面，一旦 SPAN 里面的背景图无法显示，将显示下层的文字内容，不影响正常使用。但是，此方法也有一个缺陷，就是背景图不能透明，否则将透出下面的文字。</p>
+            </div>
+            <div class="title">3.讨论CSS hacks，条件引用或者其他。</div>
+            <div class="content">
+                <p><strong>hacks　</strong></p>
+                <p>_width针对于ie6。*width,+width针对于ie6,7。</p>
+                <p>color: red\9;/*IE8以及以下版本浏览器*/（但是测试可以兼容到ie10。</p>
+                <p>*+html与*html是IE特有的标签, firefox暂不支持.而*+html又为IE7特有标签（但是测试*html兼容ie6-10。*+兼容ie7-10）。</p>
+                <p>!important 在IE中会被忽视，ie6,7,8不识别，ie9+（包括ie9）是识别的。</p>
+            </div>
+            <div class="title">4.你用过媒体查询，或针对移动端的布局/CSS 吗？</div>
+            <div class="content">
+                <p>设备宽度(device-width)未必是布局宽度(width)，为了让非适应性布局与手机相适应，我们跟关心视图宽度，因此需要一种方式来设定宽度，这样可以使用媒体查询检测。</p>
+                <p>让视图的宽度和设备宽度一致</p>
+                <pre>&lt;meta element = "viewport"
+                       content = "width=device
+                                        initial-scale = 1" &gt;</pre>
+                <p>每种布局，都应该根据目标设备指定固定宽度设计</p>
+                <pre>@media screen and (max-width:320px){}</pre>
+                <p>为移动设备调整网页图像。在最基本的页面，一个移动优化的网站就是其布局、内容、互动都经过调整，以适应移动环境。最常见的做法是使用css媒体查询的功能为不同大小的屏幕提供不同的风格；为较小的屏幕优化布局，可以通过针对移动设备的模块服务。</p>
+                <p>不同设备的分离设计-&gt;根据监视屏幕大小进行设计-&gt;（媒体查询，灵活排版，图像结合）</p>
+            </div>
+            <div class="title">5.有哪些的隐藏内容的方法（如果同时还要保证屏幕阅读器可用呢？）</div>
+            <div class="content">
+                <p>需要隐藏内容的几种可能性：</p>
+                <p>1）对文本的隐藏</p>
+                <p>2）隐藏超链接（另类黑链）</p>
+                <p>3）对统计代码隐藏</p>
+                <p>4）隐藏超出图片</p>
+                <p>5）css隐藏滚动条</p>
+                <p>6）css隐藏div层</p>
+                <p>具体实现：</p>
+                <p>1、css隐藏DIV及内容，完全隐藏内容与布局。display:none或者visibility:hidden</p>
+                <p>（面试官也许会问到：关于display:none和visible:hidden区别）</p>
+                <p>display:none和visible:hidden都能把网页上某个元素隐藏起来，但两者有区别:</p>
+                <p>display:none ---不为被隐藏的对象保留其物理空间，即该对象在页面上彻底消失，通俗来说就是看不见也摸不到。</p>
+                <p>visible:hidden--- 使对象在网页上不可见，但<strong>该对象在网页上所占的空间没有改变</strong>，通俗来说就是看不见但摸得到。</p>
+                <p>2、通过对象盒子设置缩进样式（text-indent:-9999px）方法可以隐藏超链接文本内容
+                    <br /> 同样道理，可以用来隐藏图片上方文字。此类问题我们常见于LOGO处使用，我们想让图片作为背景，而图片上方放A链接文字内容，但html锚文本功能仍然正常也能鼠标点击使用。图片作为背景而html代码内看不到图片，但文字也存在，却是文字隐藏图片显示出，鼠标也能点击指向。
+                </p>
+                <p>3、overflow: hidden 隐藏溢出DIV内容或图片</p>
+                <p>4、css隐藏滚动条</p>
+                <p>使用overflow-y:hidden;和overflow-x:hidden来隐藏或显示对应横或竖方向的滚动条。</p>
+            </div>
+            <div class="title">6.请解释一下 * { box-sizing: border-box; } 的作用, 并且说明使用它有什么好处？</div>
+            <div class="content">
+                <p>说到 IE 的 bug，在 IE6以前的版本中，IE对盒模型的解析出现一些问题，跟其它浏览器不同，将 border 与 padding 都包含在 width 之内。而另外一些浏览器则与它相反，是不包括border和padding的。对于IE浏览器，当我们设置 box-sizing: content-box; 时，浏览器对盒模型的解释遵从我们之前认识到的 W3C 标准，当它定义width和height时，它的宽度不包括border和padding；对于非IE浏览器，当我们设置box-sizing: border-box; 时，浏览器对盒模型的解释与 IE6之前的版本相同，当它定义width和height时，border和padding则是被包含在宽高之内的。内容的宽和高可以通过定义的“width”和 “height”减去相应方向的“padding”和“border”的宽度得到。内容的宽和高必须保证不能为负，必要时将自动增大该元素border box的尺寸以使其内容的宽或高最小为0。</p>
+                <p>使用 * { box-sizing: border-box; }能够统一IE和非IE浏览器之间的差异。</p>
+            </div>
+            <div class="title">7.请解释一下 inline 和 inline-block，block 的区别？</div>
+            <div class="content">
+                <p>都是display 属性规定元素应该生成的框的类型。但是block代表块级元素，元素前后都有换行符；inline是默认的样式，表示该元素被显示为内联元素，元素前后没有换行符号。也就是说，block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。而inline-block代表行内块元素（css2.0新增）。</p>
+                <p><strong>display:block</strong></p>
+                <p>1）block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</p>
+                <p>2）block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</p>
+                <p>3）block元素可以设置margin和padding属性。</p>
+                <p><strong>display:inline</strong></p>
+                <p>1）inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</p>
+                <p>2）inline元素设置width,height属性无效。</p>
+                <p>3）inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</p>
+                <p><strong>display:inline-block</strong></p>
+                <p>简单来说就是<strong>将对象呈现为inline对象，但是对象的内容作为block对象呈现</strong>。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</p>
+            </div>
+            <div class="title">8.请解释一下 relative、fixed、absolute 和 static 元素的区别</div>
+            <div class="content">
+                <p>在用CSS+DIV进行布局的时候，一直对position的四个属性值relative,absolute,static,fixed分的不是很清楚，以致经常会出现让人很郁闷的结果。今天研究了一下，总算有所了解。在此总结一下：</p>
+                <p>先看下各个属性值的定义：</p>
+                <p>1、static：默认值。没有定位，<strong>元素出现在正常的流中</strong>（忽略 top, bottom, left, right 或者 z-index 声明）。</p>
+                <p>2、relative：<strong>生成相对定位的元素</strong>，通过top,bottom,left,right的设置相对于其正常位置进行定位。可通过z-index进行层次分级。</p>
+                <p>3、absolute：生成绝对定位的元素，<strong>相对于 static 定位以外的第一个父元素进行定位</strong>。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。可通过z-index进行层次分级。</p>
+                <p>4、fixed：生成绝对定位的元素，<strong>相对于浏览器窗口进行定位</strong>。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。可通过z-index进行层次分级。</p>
+                <p>static与fixed的定位方式较好理解，在此不做分析。下面对应用的较多的relative和absolute进行分析：</p>
+                <p>1、relative。定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。</p>
+                <p>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层的位置可以看出其正常位置依然存在。</p>
+                <p>2、absolute。定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。在将黄色背景层定位为absolute后，灰色背景层自动补上。</p>
+                <p>3、relative与absolute的主要区别：</p>
+                <p>首先，是上面已经提到过的在正常流中的位置存在与否。</p>
+                <p>其次，relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式。红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。而如果红色背景层定位为absolute。红色背景层依然定义top:20px；left:20px；但其相对 的元素变为定位方式为absolute或relative的黄色背景层。因此，对于absolute定位的层总是相对于其最近的定义为absolute或 relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</p>
+                <p>除top、left、right、bottom定位外，margin属性值的定义也符合上述规则。</p>
+                <p>&nbsp;</p>
+                <p>static与定位用的比较少，也比较简单，在此不做分析。
+                    <br /> 下面对应用的较多的relative和absolute与fixed进行分析：
+                    <br /> relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式。
+                    <br /> absolute定位的层总是相对于其最近的定义为absolute或relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位，
+                    <br /> fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。
+                </p>
+            </div>
+            <div class="title">9.为什么响应式设计（responsive design）和自适应设计（adaptive design）不同？</div>
+            <div class="content">
+                <p><strong>自适应布局（Adaptive Layout）</strong></p>
+                <p>自适应布局（Adaptive）的特点是分别为不<strong>同的屏幕分辨率定义布局</strong>。布局切换时页面元素发生改变，但在每个布局中，页面元素不随窗口大小的调整发生变化。就是说你看到的页面，里面元素的位置会变化而大小不会变化；</p>
+                <p>你可以把自适应布局看作是静态布局的一个系列。</p>
+                <p><strong>流式布局（Liquid Layout）</strong></p>
+                <p>流式布局（Liquid）的特点（也叫"Fluid") 是<strong>页面元素的宽度按照屏幕进行适配调整</strong>，主要的问题是如果屏幕尺度跨度太大，那么在相对其原始设计而言过小或过大的屏幕上不能正常显示。</p>
+                <p><strong>响应式布局（Responsive Layout）</strong></p>
+                <p>分别为<strong>不同的屏幕分辨率定义布局</strong>，同时，在每个布局中，应用流式布局的理念，即页面元素宽度随着窗口调整而自动适配。</p>
+                <p>可以把响应式布局看作是流式布局和自适应布局设计理念的融合。</p>
+            </div>
+            <div class="title">10.如果设计中使用了非标准的字体，你该如何去实现？</div>
+            <div class="content">
+                <p>1）图片替代</p>
+                <p>2）好是跟产品沟通，尽量使用默认就有的字体。虽然我们可以用webfonts，但它在页面加载的时候会将整个字体包都下载下来，这对于手机端网页来说无疑是致命的。如果产品一定要用非标准字体，可用这个软件FontCreator，可以从一个字体包中将你这个页面需要的那几个字提取出来，打成一个新的字体包，这样会节省很多流量</p>
+                <p>Webfonts (字体服务例如：Google Webfonts，Typekit 等等。)</p>
+            </div>
+        </article>
+
+        <article class="js-box">
+            <div class="title">1.请解释事件代理 (event delegation)</div>
+            <div class="content">
+                <p>在传统的事件处理中，你按照需要为每一个元素添加或者是删除事件处理器。然而，事件处理器将有可能导致内存泄露或者是性能下降——你用得越多这种风险就越大。JavaScript事件代理则是一种简单的技巧，通过它你可以把事件处理器添加到一个父级元素上，这样就避免了把事件处理器添加到多个子级元素上。</p>
+            </div>
+
+            <div class="title">2.请解释 JavaScript 中 this 是如何工作的</div>
+            <div class="content">
+                <p>调用一个函数会暂停当前函数的执行，传递控制权和参数给新函数。除了声明时定义的形式参数，每个函数还接收两个附加的参数：this和arguments。参数this在面向对象编程中非常重要，它的值取决于调用的模式。在JavaScript中一个有4中调用模式：方法调用模式、函数调用模式、构造器调用模式和apply调用模式。</p>
+                <p>1.方法调用模式:当函数被保存为对象的一个属性时，成该函数为该对象的方法。函数中this的值为该对象。</p>
+                <p>2.函数调用模式:当函数并不是对象的属性。函数中this的值为全局对象</p>
+                <p>3.构造器调用模式:即使用new调用的函数，则其中this将会被绑定到那个新构造的对象。</p>
+                <p>4.使用apply或call调用模式:该模式调用时，函数中this被绑定到apply或call方法调用时接受的第一个参数。</p>
+            </div>
+
+            <div class="title">3.请解释原型继承 (prototypal inheritance) 的原理。</div>
+            <div class="content">
+                <p>prototype属性这个属性包含一个对象（以下简称"prototype对象"），所有实例对象需要共享的属性和方法，都放在这个对象里面；那些不需要共享的属性和方法，就放在构造函数里面。
+                    实例对象一旦创建，将自动引用prototype对象的属性和方法。</p>
+            </div>
+
+            <div class="title">4.你怎么看 AMD vs CommonJS</div>
+            <div class="content">
+                <p>通行的Javascript模块规范共有两种：CommonJS和AMD</p>
+                <p>CommonJS:2009年，美国程序员Ryan Dahl创造了node.js项目，将javascript语言用于服务器端编程。
+                    这标志"Javascript模块化编程"正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，与操作系统和其他应用程序互动，否则根本没法编程。
+                    node.js的模块系统，就是参照CommonJS规范实现的。在CommonJS中，有一个全局性方法require()，用于加载模块。</p>
+                <p>AMD:有了服务器端模块以后，很自然地，大家就想要客户端模块。而且最好两者能够兼容，一个模块不用修改，在服务器和浏览器都可以运行。
+                    但是，由于一个重大的局限，使得CommonJS规范不适用于浏览器环境。浏览器端的模块，不能采用"同步加载"（synchronous），只能采用"异步加载"（asynchronous）。这就是AMD规范诞生的背景。
+                    AMD是"Asynchronous Module Definition"的缩写，意思就是"异步模块定义"。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。</p>
+            </div>
+
+            <div class="title">5.什么是闭包 (closure)，如何使用它，为什么要使用它？</div>
+            <div class="content">
+                <p>闭包就是能够读取其他函数内部变量的函数。由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成"定义在一个函数内部的函数"。
+                    所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
+                <p>闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</p>
+            </div>
+
+            <div class="title">6.在什么时候你会使用document.write()</div>
+            <div class="content">
+                <p>大多数生成的广告代码依旧使用document.write()，虽然这种用法会让人很不爽。</p>
+            </div>
+
+            <div class="title">7.请解释JSONP的工作原理，以及它为什么不是真正的AJAX</div>
+            <div class="content">
+                <p>JSONP (JSON with Padding)是一个简单高效的跨域方式，HTML中的script标签可以加载并执行其他域的javascript，于是我们可以通过script标记来动态加载其他域的资源。例如我要从域A的页面pageA加载域B的数据，那么在域B的页面pageB中我以JavaScript的形式声明pageA需要的数据，然后在 pageA中用script标签把pageB加载进来，那么pageB中的脚本就会得以执行。JSONP在此基础上加入了回调函数，pageB加载完之后会执行pageA中定义的函数，所需要的数据会以参数的形式传递给该函数。JSONP易于实现，但是也会存在一些安全隐患，如果第三方的脚本随意地执行，那么它就可以篡改页面内容，截获敏感数据。但是在受信任的双方传递数据，JSONP是非常合适的选择。</p>
+                <p>AJAX是不跨域的，而JSONP是一个是跨域的，还有就是二者接收参数形式不一样！</p>
+            </div>
+
+            <div class="title">8.请描述下事件冒泡机制</div>
+            <div class="content">
+                <p>冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。</p>
+                <p>捕获型事件：事件从最不精确的对象(document 对象)开始触发，然后到最精确。</p>
+                <p>支持W3C标准的浏览器在添加事件时用addEventListener(event,fn,useCapture)方法，基中第3个参数useCapture是一个Boolean值，用来设置事件是在事件捕获时执行，还是事件冒泡时执行。而不兼容W3C的浏览器(IE)用attachEvent()方法，此方法没有相关设置，不过IE的事件模型默认是在事件冒泡时执行的，也就是在useCapture等于false的时候执行，所以把在处理事件时把useCapture设置为false是比较安全，也实现兼容浏览器的效果。</p>
+            </div>
+
+            <div class="title">9.请解释变量声明提升</div>
+            <div class="content">
+                <p>在JS里定义的变量，存在于作用域链里，而在函数执行时会先把变量的声明进行提升，仅仅是把声明进行了提升，而其值的定义还在原来位置。</p>
+            </div>
+
+            <div class="title">10.请指出document.onload和document.ready两个事件的区别</div>
+            <div class="content">
+                <p>页面加载完成有两种事件，一是ready，表示文档结构已经加载完成（不包含图片等非文字媒体文件），二是onload，指示页面包含图片等文件在内的所有元素都加载完成。</p>
+            </div>
+
+            <div class="title">11.你如何从浏览器的URL中获取查询字符串参数</div>
+            <div class="content">
+                <pre>function parseQueryString ( name ){
+                    name = name.replace(/[\[]/,"\\\[");
+                    var regexS = "[\\?&]"+name+"=([^&#]*)";
+                    var regex = new RegExp( regexS );
+                    var results = regex.exec( window.location.href );
+
+                    if(results == null) {
+                        return "";
+                    } else {
+                    return results[1];
+                    }
+                }</pre>
+            </div>
+
+            <div class="title">12.请解释一下JavaScript的同源策略</div>
+            <div class="content">
+                <p>在客户端编程语言中，如javascript和 ActionScript，同源策略是一个很重要的安全理念，它在保证数据的安全性方面有着重要的意义。同源策略规定跨域之间的脚本是隔离的，一个域的脚本不能访问和操作另外一个域的绝大部分属性和方法。那么什么叫相同域，什么叫不同的域呢？当两个域具有相同的协议, 相同的端口，相同的host，那么我们就可以认为它们是相同的域。同源策略还应该对一些特殊情况做处理，比如限制file协议下脚本的访问权限。本地的HTML文件在浏览器中是通过file协议打开的，如果脚本能通过file协议访问到硬盘上其它任意文件，就会出现安全隐患，目前IE8还有这样的隐患。</p>
+            </div>
+
+            <div class="title">13.你知道哪些针对jQuery的优化方法</div>
+            <div class="content">
+                <p>1.总是从ID选择器开始继承在jQuery中最快的选择器是ID选择器，因为它直接来自于JavaScript的getElementById()方法。</p>
+                <p>2.在class前使用tag(标签名)在jQuery中第二快的选择器是tag(标签)选择器(比如：$(“head”))。</p>
+                <p>3.将jQuery对象缓存起来把jQuery对象缓存起来就是要告诉我们要养成将jQuery对象缓存进变量的习惯。</p>
+                <p>4.如果你打算在其他函数中使用jQuery对象，那么你必须把它们缓存到全局环境中。</p>
+                <p>5.冒泡除非在特殊情况下,否则每一个js事件(例如:click,mouseover等.)都会冒泡到父级节点。</p>
+                <p>6.推迟到$(window).load</p>
+                <p>7.压缩JavaScript</p>
+                <p>8.尽量使用ID代替Class</p>
+                <p>9.给选择器一个上下文</p>
+                <p>10.慎用.live()方法</p>
+            </div>
+
+            <div class="title">14.请指出$和$.fn的区别，或者说出$.fn的用途</div>
+            <div class="content">
+                <p>Jquery为开发插件提供了两个方法，分别是：$.extend(obj);$.fn.extend(obj);</p>
+                <p>$.extend(obj);是为了扩展jquery本身，为类添加新的方法。$.fn.extend(obj);给JQUERY对象添加方法。</p>
+                <p>$.fn中的fn是什么意思，其实是prototype，即$.fn=$.prototype;</p>
+                <pre>$.extend({
+                        add:function(a, b) {
+                            return a+b;
+                        }
+                    })
+                    $.add(5,8); // return 13</pre>
+                <pre>$.fn.extend({
+                        clickwhile:function(){
+                            $(this).click(function(){
+                                alert($(this).val())
+                            })
+                        }
+                    })
+                    $('input').clickwhile(); // 当点击输入框会弹出该对象的Value值</pre>
+    
+            </div>
+
+            <div class="title">15.请指出.bind()，.live()和.delegate()的区别</div>
+            <div class="content">
+                <p>在操纵DOM的语境中，document是根节点。现在我们可以较容易地说明.bind()、.live()和.delegate()的不同之处了。</p>
+                <p>.bind()</p>
+                <pre>$('a').bind('click', function() {alert("That tickles!")});</pre>
+                <p>这是最简单的绑定方法了。JQuery扫描文档找出所有的$(‘a’)元素，并把alert函数绑定到每个元素的click事件上。</p>
+                <p>.live()</p>
+                <pre>$('a').live('click', function() {alert("That tickles!")});</pre>
+                <p>JQuery把alert函数绑定到$(document)元素上，并使用’click’和’a’作为参数。任何时候只要有事件冒泡到document节点上，它就查看该事件是否是一个click事件，以及该事件的目标元素与’a’这一CSS选择器是否匹配，如果都是的话，则执行函数。</p>
+                <p>.delegate()</p>
+                <pre>$('#container').delegate('a', 'click', function() {alert("That tickles!")});</pre>
+                <p>JQuery扫描文档查找$(‘#container’)，并使用click事件和’a’这一CSS选择器作为参数把alert函数绑定到$(‘#container’)上。任何时候只要有事件冒泡到$(‘#container’)上，它就查看该事件是否是click事件，以及该事件的目标元素是否与CCS选择器相匹配。如果两种检查的结果都为真的话，它就执行函数。</p>
+            </div>
+
+            <div class="title">16.解释"deferreds"</div>
+            <div class="content">
+                <p>开发网站的过程中，我们经常遇到某些耗时很长的javascript操作。其中，既有异步的操作（比如ajax读取服务器数据），也有同步的操作（比如遍历一个大型数组），它们都不是立即能得到结果的。</p>
+                <p>通常的做法是，为它们指定回调函数（callback）。即事先规定，一旦它们运行结束，应该调用哪些函数。</p>
+                <p>但是，在回调函数方面，jQuery的功能非常弱。为了改变这一点，jQuery开发团队就设计了deferred对象。</p>
+                <p>简单说，deferred对象就是jQuery的回调函数解决方案。在英语中，defer的意思是"延迟"，所以deferred对象的含义就是"延迟"到未来某个点再执行。</p>
+            </div>
+
+            <div class="title">17..call和.apply的区别是什么？</div>
+            <div class="content">
+                <p>call方法: </p>
+                <p>语法：call(thisObj，Object) </p>
+                <p>定义：调用一个对象的一个方法，以另一个对象替换当前对象。</p>
+                <p>说明：call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。 如果没有提供 thisObj 参数，那么 Global 对象被用作 thisObj。  </p>
+                <p>apply方法: </p>
+                <p>语法：apply(thisObj，[argArray]) </p>
+                <p>定义：应用某一对象的一个方法，用另一个对象替换当前对象。 </p>
+                <p>说明：如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj， 并且无法被传递任何参数 </p>
+                <p>对于apply和call两者在作用上是相同的，但两者在参数上有以下区别： </p>
+                <p>对于第一个参数意义都一样，但对第二个参数：apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。如 func.call(func1,var1,var2,var3)对应的apply写法为：func.apply(func1,[var1,var2,var3])同时使用apply的好处是可以直接将当前函数的arguments对象作为apply的第二个参数传入。 </p>
+            </div>
+
+            <div class="title">18.什么是 Event Loop？</div>
+            <div class="content">
+                <p>Event Loop是一个程序结构，用于等待和发送消息和事件。简单说，就是在程序中设置两个线程：一个负责程序本身的运行，称为"主线程"；另一个负责主线程与其他进程（主要是各种I/O操作）的通信，被称为"Event Loop线程"（可以译为"消息线程"）。</p>
+            </div>
+
+            <div class="title">19.javascript异步编程方法</div>
+            <div class="content">
+                <p>你可能知道，Javascript语言的执行环境是"单线程"（single thread）。</p>
+                <p>所谓"单线程"，就是指一次只能完成一件任务。如果有多个任务，就必须排队，前面一个任务完成，再执行后面一个任务，以此类推。</p>
+                <p>这种模式的好处是实现起来比较简单，执行环境相对单纯；坏处是只要有一个任务耗时很长，后面的任务都必须排队等着，会拖延整个程序的执行。常见的浏览器无响应（假死），往往就是因为某一段Javascript代码长时间运行（比如死循环），导致整个页面卡在这个地方，其他任务无法执行。</p>
+                <p>为了解决这个问题，Javascript语言将任务的执行模式分成两种：同步（Synchronous）和异步（Asynchronous）。</p>
+                <p>"同步模式"就是上一段的模式，后一个任务等待前一个任务结束，然后再执行，程序的执行顺序与任务的排列顺序是一致的、同步的；"异步模式"则完全不同，每一个任务有一个或多个回调函数（callback），前一个任务结束后，不是执行后一个任务，而是执行回调函数，后一个任务则是不等前一个任务结束就执行，所以程序的执行顺序与任务的排列顺序是不一致的、异步的。</p>
+                <p>"异步模式"非常重要。在浏览器端，耗时很长的操作都应该异步执行，避免浏览器失去响应，最好的例子就是Ajax操作。在服务器端，"异步模式"甚至是唯一的模式，因为执行环境是单线程的，如果允许同步执行所有http请求，服务器性能会急剧下降，很快就会失去响应。</p>
+                <p>本文总结了"异步模式"编程的4种方法，理解它们可以让你写出结构更合理、性能更出色、维护更方便的Javascript程序。</p>
+                <p>一、回调函数</p>
+                <p>二、事件监听</p>
+                <p>三、发布/订阅</p>
+                <p>四、Promises对象</p>
+            </div>
+
+            <div class="title">20.请解释什么是单页应用 (single page app), 以及如何使其对搜索引擎友好 (SEO-friendly)</div>
+            <div class="content">
+                <p>越来越多的网站，开始采用"单页面结构"（Single-page application）。</p>
+                <p>整个网站只有一张网页，采用Ajax技术，根据用户的输入，加载不同的内容。</p>
+                <p>这种做法的好处是用户体验好、节省流量，缺点是AJAX内容无法被搜索引擎抓取。</p>
+                <p>Discourse是一个论坛程序，严重依赖Ajax，但是又必须让Google收录内容。它的解决方法就是放弃井号结构，采用 History API。</p>
+                <p>首先，用History API替代井号结构，让每个井号都变成正常路径的URL，这样搜索引擎就会抓取每一个网页。</p>
+                <p>然后，定义一个JavaScript函数，处理Ajax部分，根据网址抓取内容（假定使用jQuery）。</p>
+                <p>再定义鼠标的click事件。</p>
+                <p>最后，设置服务器端。</p>
+                <p>我们把所有要让搜索引擎收录的内容，都放在noscript标签之中。这样的话，用户依然可以执行AJAX操作，不用刷新页面，但是搜索引擎会收录每个网页的主要内容！</p>
+            </div>
+
+
+        </article>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
