@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    #normal_box .xiehe {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    
+    #normal_box .xiezi {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        padding: 10px;
+        border: 5px solid red;
+    }
+    
+    #weird_box .xiehe {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    
+    #weird_box .xiezi {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        padding: 10px;
+        border: 5px solid red;
+        -webkit-box-sizing: border-box;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="normal_box">
+        <div class="xiehe">
+            <div class="xiezi">
+                鞋子
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="weird_box">
+        <div class="xiehe">
+            <div class="xiezi">
+                怪异鞋子
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

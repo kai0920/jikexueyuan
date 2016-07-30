@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .box {
+        display: -webkit-flex;
+        width: 600px;
+        height: 180px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    #box {
+        -webkit-flex-direction: row;
+    }
+    
+    #box2 {
+        -webkit-flex-direction: column;
+    }
+    
+    .box li:nth-child(1) {
+        -webkit-flex: 1;
+        background: #666;
+    }
+    
+    .box li:nth-child(2) {
+        -webkit-flex: 2;
+        background: #999;
+    }
+    
+    .box li:nth-child(3) {
+        -webkit-flex: 3;
+        background: #ccc;
+    }
+    
+    #box3 li:nth-child(1) {
+        -webkit-order: 2;
+    }
+    
+    #box3 li:nth-child(2) {
+        -webkit-order: 3;
+    }
+    
+    #box3 li:nth-child(3) {
+        -webkit-order: 1;
+    }
+    
+    .test {
+        width: 628px;
+        border: 10px solid #000;
+        -webkit-column-width: 200px;
+        -webkit-columns-count: 3;
+        -webkit-column-rule: 1px solid #090;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>水平分栏</h1>
+    <ul id="box" class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h1>垂直分栏</h1>
+    <ul id="box2" class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h1>排序(flex)</h1>
+    <ul id="box3" class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <h1>cloumn分栏</h1>
+    <div class="test">
+        <p>This module describes multi-column layout in CSS. By using functionality described in this document, style sheets can declare that the content of an element is to be laid out in multiple columns. </p>
+        <p>On the Web, tables have also been used to describe multi-column layouts. The main benefit of using CSS-based columns is flexibility; content can flow from one column to another, and the number of columns can vary depending on the size of the viewport. Removing presentation table markup from documents allows them to more easily be presented on various output devices including speech synthesizers and small mobile devices.</p>
+    </div>
+</body>
+
+</html>
