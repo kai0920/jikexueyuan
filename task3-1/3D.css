@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*父元素*/
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    
+}
+/*每面大小*/
+.side {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    /*脱离文档流*/
+    border-radius: 8px;
+}
+
+
+/*各个面的transform参数设置*/
+.one {
+    transform: rotateX(90deg) translateZ(150px);
+    -webkit-transform: rotateX(90deg) translateZ(150px);
+    -moz-transform: rotateX(90deg) translateZ(150px);
+    -ms-transform: rotateX(90deg) translateZ(150px);
+    -o-transform: rotateX(90deg) translateZ(150px);
+
+}
+
+.two {
+    transform: rotateX(270deg) translateZ(150px);
+    -webkit-transform: rotateX(270deg) translateZ(150px);
+    -moz-transform: rotateX(270deg) translateZ(150px);
+    -ms-transform: rotateX(270deg) translateZ(150px);
+    -o-transform: rotateX(270deg) translateZ(150px);
+}
+
+.three {
+    transform: rotateY(90deg) translateZ(150px);
+    -webkit-transform: rotateY(90deg) translateZ(150px);
+    -moz-transform: rotateY(90deg) translateZ(150px);
+    -ms-transform: rotateY(90deg) translateZ(150px);
+    -o-transform: rotateY(90deg) translateZ(150px);
+}
+
+.four {
+    transform: rotateY(270deg) translateZ(150px);
+    -webkit-transform: rotateY(270deg) translateZ(150px);
+    -moz-transform: rotateY(270deg) translateZ(150px);
+    -ms-transform: rotateY(270deg) translateZ(150px);
+    -o-transform: rotateY(270deg) translateZ(150px);
+}
+
+.five {
+    transform: translateZ(-150px);
+    -webkit-transform: translateZ(-150px);
+    -moz-transform: translateZ(-150px);
+    -ms-transform: translateZ(-150px);
+    -o-transform: translateZ(-150px);
+}
+
+.six {
+    transform: translateZ(150px);
+    -webkit-transform: translateZ(150px);
+    -moz-transform: translateZ(150px);
+    -ms-transform: translateZ(150px);
+    -o-transform: translateZ(150px);
+}
+
+
+/*各个面小div位置设置*/
+.box .side div {
+    width: 94px;
+    height: 94px;
+    border: 2px solid transparent;
+    position: absolute;
+    border-radius: 8px;
+    opacity: 0.9;
+}
+
+.box .side div:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.box .side div:nth-child(2) {
+    top: 0;
+    left: 100px;
+}
+
+.box .side div:nth-child(3) {
+    top: 0;
+    left: 200px;
+}
+
+.box .side div:nth-child(4) {
+    top: 100px;
+    left: 0;
+}
+
+.box .side div:nth-child(5) {
+    top: 100px;
+    left: 100px;
+}
+
+.box .side div:nth-child(6) {
+    top: 100px;
+    left: 200px;
+}
+
+.box .side div:nth-child(7) {
+    top: 200px;
+    left: 0;
+}
+
+.box .side div:nth-child(8) {
+    top: 200px;
+    left: 100px;
+}
+
+.box .side div:nth-child(9) {
+    top: 200px;
+    left: 200px;
+}
+
+/*各个面的小DIV颜色设置*/
+.box .one div {
+    background-color: red;
+}
+
+.box .two div {
+    background-color: green;
+}
+
+.box .three div {
+    background-color: blue;
+}
+
+.box .four div {
+    background-color: yellow;
+}
+
+.box .five div {
+    background-color: purple;
+}
+
+.box .six div {
+    background-color: darkorange;
+}
+
+
+/*动画*/
+
+.box {
+    animation: 3s animation ease-in-out infinite;
+    transform-origin: 100px 100px 0;
+
+}
+.box{
+	-webkit-animation: 3s animation ease-in-out infinite;
+    -webkit-transform-origin: 150px 150px 0;
+}
+.box{
+	-moz-animation: 3s animation ease-in-out infinite;
+    -moz-transform-origin: 150px 150px 0;
+}
+.box{
+	-ms-animation: 3s animation ease-in-out infinite;
+    -ms-transform-origin: 150px 150px 0;
+}
+.box{
+	-o-animation: 3s animation ease-in-out infinite;
+    -o-transform-origin: 150px 150px 0;
+}
+
+@keyframes animation {
+    from {
+        transform: rotateX(0) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes animation {
+    from {
+        -webkit-transform: rotateX(0) rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+@-moz-keyframes animation {
+    from {
+        -moz-transform: rotateX(0) rotateY(0deg);
+    }
+    to {
+        -moz-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+@-ms-keyframes animation {
+    from {
+        -ms-transform: rotateX(0) rotateY(0deg);
+    }
+    to {
+        -ms-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+@-o-keyframes animation {
+    from {
+        -o-transform: rotateX(0) rotateY(0deg);
+    }
+    to {
+        -o-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
