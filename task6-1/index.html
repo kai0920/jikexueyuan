@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="display">
+            <input type="text" dir="rtl" id="input" value="0" disabled/>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <input type="button" class="btn clear_oper" value="删除">
+                </td>
+                <td>
+                    <input type="button" class="btn clear_oper" value="全清">
+                </td>
+                <td>
+                    <input type="button" class="btn clear_oper" value="清屏">
+                </td>
+                <td>
+                    <input type="button" class="btn self_oper" value="+/-">
+                </td>
+                <td>
+                    <input type="button" class="btn self_oper" value="1/x">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="btn num" value="7">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value="8">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value="9">
+                </td>
+                <td>
+                    <input type="button" class="btn oper" value="÷">
+                </td>
+                <td>
+                    <input type="button" class="btn self_oper" value="%">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="btn num" value="4">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value="5">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value="6">
+                </td>
+                <td>
+                    <input type="button" class="btn oper" value="x">
+                </td>
+                <td>
+                    <input type="button" class="btn self_oper" value="√￣">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="btn num" value="1">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value="2">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value="3">
+                </td>
+                <td>
+                    <input type="button" class="btn oper" value="-">
+                </td>
+                <td rowspan="2">
+                    <input type="button" class="btn equal_oper" id="equal_oper" value="=">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" class="btn num num-0" value="0">
+                </td>
+                <td>
+                    <input type="button" class="btn num" value=".">
+                </td>
+                <td>
+                    <input type="button" class="btn oper" value="+">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<script type="text/javascript" src="script.js"></script>    
+</body>
+
+</html>

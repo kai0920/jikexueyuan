@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+#container {
+    width: 460px;
+    margin: 100px auto;
+    border: 1px solid grey;
+    padding: 10px;
+    background: #DADADA;
+    box-shadow: 2px 2px 5px #454545;
+}
+
+#container #input {
+    box-sizing: border-box;
+    width: 460px;
+    height: 65px;
+    *height: 45px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-align: right;
+    box-shadow: inset 0 3px 7px #454545;
+    border-radius: 10px;
+    background-color: #FCFDEA;
+}
+
+table {
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-align: center;
+    width: 460px;
+}
+
+table td {
+    padding: 8px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+table .btn {
+    width: 75px;
+    height: 45px;
+    border-radius: 9px;
+    border: 1px solid grey;
+    border:0 none\9;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, .125);
+}
+
+table .num {
+    background: -webkit-linear-gradient(#E9E9EA, #9A9E9F);
+    background:#E9E9EA\9;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+table .num-0 {
+    width: 170px;
+}
+
+table .oper {
+    font-size: 30px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#808586, #454545);
+    background: #808586\9;
+}
+
+table .self_oper {
+    background: -webkit-linear-gradient(#484848, #000);
+    background:#484848\9;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+table .equal_oper {
+    background: -webkit-linear-gradient(#484848, #000);
+    background:#484848\9;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 106px;
+}
+
+table .clear_oper {
+    background: -webkit-linear-gradient(#E08856, #BC5722);
+    background:#E08856\9;
+    font-size: 20px;
+    color: #ffffff;
+}
