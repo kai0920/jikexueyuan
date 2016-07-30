@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>初级前端面试题</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div id="container">
+        <article class="inner-box">
+            <h2>HTML+CSS</h2>
+            <div class="title">1.对WEB标准以及W3C的理解与认识</div>
+            <div class="content">
+                标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；
+            </div>
+            <div class="title">2.xhtml和html有什么区别</div>
+            <div class="content">
+                <p>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言</p>
+                <p> 最主要的不同：</p>
+                <p> XHTML 元素必须被正确地嵌套。</p>
+                <p> XHTML 元素必须被关闭。</p>
+                <p> 标签名必须用小写字母。</p>
+                <p> XHTML 文档必须拥有根元素。</p>
+            </div>
+            <div class="title">3.Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</div>
+            <div class="content">
+                <p>用于声明文档使用那种规范（html/Xhtml）一般为 严格 过度 基于框架的html文档</p>
+                <p> 加入XMl声明可触发，解析方式更改为IE5.5 拥有IE5.5的bug</p>
+            </div>
+            <div class="title">4.行内元素有哪些?块级元素有哪些?CSS的盒模型?</div>
+            <div class="content">
+                <p>块级元素：div p h1 h2 h3 h4 form ul</p>
+                <p> 行内元素: a b br i span input select</p>
+                <p> Css盒模型:内容，border ,margin，padding</p>
+            </div>
+            <div class="title"> 5.CSS引入的方式有哪些? link和@import的区别是?</div>
+            <div class="content">
+                <p>内联 内嵌 外链 导入</p>
+                <p> 区别 ：同时加载</p>
+                <p> 前者无兼容性，后者CSS2.1以下浏览器不支持</p>
+                <p> Link 支持使用javascript改变样式，后者不可</p>
+            </div>
+            <div class="title"> 6.CSS选择符有哪些?哪些属性可以继承?优先级算法如何计算?内联和important哪个优先级高?</div>
+            <div class="content">
+                <p>标签选择符 类选择符 id选择符</p>
+                <p> 继承不如指定 Id&gt;class&gt;标签选择</p>
+                <p> 后者优先级高</p>
+            </div>
+            <div class="title"> 7.前端页面有哪三层构成，分别是什么?作用是什么?</div>
+            <div class="content">
+                结构层 Html 表示层 CSS 行为层 js
+            </div>
+            <div class="title"> 8.css的基本语句构成是?</div>
+            <div class="content">
+                选择器&#123;属性1:值1;属性2:值2;……&#125;
+            </div>
+            <div class="title"> 9.你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</div>
+            <div class="content">
+                Ie(Ie内核) 火狐（Gecko） 谷歌（webkit） opear(Presto)
+            </div>
+            <div class="title"> 10.写出几种IE6 BUG的解决方法</div>
+            <div class="content">
+                <p>1.双边距BUG float引起的 使用display</p>
+                <p>2.3像素问题 使用float引起的 使用display:inline -3px</p>
+                <p>3.超链接hover 点击后失效 使用正确的书写顺序 link visited hover active</p>
+                <p>4.Ie z-index问题 给父级添加position:relative</p>
+                <p>5.Png 透明 使用js代码 改</p>
+                <p>6.Min-height 最小高度 ！Important 解决’</p>
+                <p>7.select 在ie6下遮盖 使用iframe嵌套</p>
+                <p>8.为什么没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）</p>
+            </div>
+            <div class="title"> 11.标签上title与alt属性的区别是什么?</div>
+            <div class="content">
+                <p>Alt 当图片不显示是 用文字代表。</p>
+                <p> Title 为该属性提供信息</p>
+            </div>
+            <div class="title"> 12.描述css reset的作用和用途。</div>
+            <div class="content">
+                Reset重置浏览器的css默认属性 浏览器的品种不同，样式不同，然后重置，让他们统一
+            </div>
+            <div class="title"> 13.解释css sprites，如何使用。</div>
+            <div class="content">
+                Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量
+            </div>
+            <div class="title"> 14.浏览器标准模式和怪异模式之间的区别是什么?</div>
+            <div class="content">
+                <p>盒子模型 渲染模式的不同</p>
+                <p> 使用 window.top.document.compatMode 可显示为什么模式</p>
+            </div>
+            <div class="title"> 15.你如何对网站的文件和资源进行优化?期待的解决方案包括：</div>
+            <div class="content">
+                <p>文件合并</p>
+                <p> 文件最小化/文件压缩</p>
+                <p> 使用CDN托管</p>
+                <p> 缓存的使用</p>
+            </div>
+            <div class="title"> 16.什么是语义化的HTML?</div>
+            <div class="content">
+                直观的认识标签 对于搜索引擎的抓取有好处
+            </div>
+            <div class="title"> 17.清除浮动的几种方式，各自的优缺点</div>
+            <div class="content">
+                <p>1.使用空标签清除浮动 clear:both（理论上能清除任何标签，，，增加无意义的标签）</p>
+                <p> 2.使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,,使用zoom:1用于兼容IE）</p>
+                <p> 3.是用afert伪元素清除浮动(用于非IE浏览器)</p>
+            </div>
+            <div class="title"> 18.你最喜欢的图片替换方法是什么，你如何选择使用。</div>
+            <div class="content">
+                <p><strong>Fahrner Image Replacement (FIR)</strong></p>
+                <p>这是最早出现的图文替换技术，是由 Todd Fahrner 提出的，非常容易理解：</p>
+                <pre>&lt;h2&gt;&lt;span&gt;Hello World&lt;/span&gt;&lt;/h2&gt;</pre>
+                <pre>h2 {
+                 background:url(hello_world.gif) no-repeat; 
+                width: 150px; 
+                height: 35px; 
+                } 
+                span {
+                    display: none; 
+                }</pre>
+                <p>代码非常明白：先将图片应用在 H2 的背景中，然后将 SPAN 的标签隐藏。但是这种方式有个问题，就是当图片无法显示时，将导致这个区域没有任何内容。同时，使用 display:none 的方式隐藏的内容，将被许多主流屏幕阅读器忽略，从而造成可用性问题，因此，应该尽量避免使用。</p>
+                <p><strong>Phark 的方法</strong></p>
+                <pre> &lt;h2&gt; Hello World &lt;/h2&gt;</pre>
+                <pre> h2 {
+                text-indent: -5000px;
+                background:url(hello_world.gif) no-repeat;
+                width: 150px;height:35px; 
+                }</pre>
+                <p>代码也非常简单，通过文本缩进，将文字隐藏，但是，当图片无法显示时，依然存在 FIR 的问题。</p>
+                <p><strong>Gilder/Levin 的方法</strong></p>
+                <pre>  &lt;h2&gt;&lt;span&gt;&lt;/span&gt;Hello World &lt;/h2&gt;</pre>
+                <pre> h2 {
+                    width: 150px;height: 35px;
+                    position: relative; 
+                } 
+                h2 span {
+                    background: url(hello_world.gif) no-repeat; 
+                    position: absolute; 
+                    width: 100%; 
+                    height: 100%; 
+                }</pre>
+                <p>首先，将 H2 的 position 设为 relative ，这样将使 H2 里面的元素定位以 H2 为参照，然后将 SPAN 元素绝对定位，撑满整个 H2 区域，同时将背景图应用在 SPAN 标签里面；这种方法的原理是将 SPAN 标签覆盖在文字内容上面，一旦 SPAN 里面的背景图无法显示，将显示下层的文字内容，不影响正常使用。但是，此方法也有一个缺陷，就是背景图不能透明，否则将透出下面的文字。</p>
+            </div>
+            <div class="title">19.讨论CSS hacks，条件引用或者其他。</div>
+            <div class="content">
+                <p><strong>hacks　</strong></p>
+                <p>_width针对于ie6。*width,+width针对于ie6,7。</p>
+                <p>color: red\9;/*IE8以及以下版本浏览器*/（但是测试可以兼容到ie10。</p>
+                <p>*+html与*html是IE特有的标签, firefox暂不支持.而*+html又为IE7特有标签（但是测试*html兼容ie6-10。*+兼容ie7-10）。</p>
+                <p>!important 在IE中会被忽视，ie6,7,8不识别，ie9+（包括ie9）是识别的。</p>
+            </div>
+            <div class="title">20.你用过媒体查询，或针对移动端的布局/CSS 吗？</div>
+            <div class="content">
+                <p>设备宽度(device-width)未必是布局宽度(width)，为了让非适应性布局与手机相适应，我们跟关心视图宽度，因此需要一种方式来设定宽度，这样可以使用媒体查询检测。</p>
+                <p>让视图的宽度和设备宽度一致</p>
+                <pre>&lt;meta element = "viewport"
+                       content = "width=device
+                                        initial-scale = 1" &gt;</pre>
+                <p>每种布局，都应该根据目标设备指定固定宽度设计</p>
+                <pre>@media screen and (max-width:320px){}</pre>
+                <p>为移动设备调整网页图像。在最基本的页面，一个移动优化的网站就是其布局、内容、互动都经过调整，以适应移动环境。最常见的做法是使用css媒体查询的功能为不同大小的屏幕提供不同的风格；为较小的屏幕优化布局，可以通过针对移动设备的模块服务。</p>
+                <p>不同设备的分离设计-&gt;根据监视屏幕大小进行设计-&gt;（媒体查询，灵活排版，图像结合）</p>
+            </div>
+            <div class="title">21.有哪些的隐藏内容的方法（如果同时还要保证屏幕阅读器可用呢？）</div>
+            <div class="content">
+                <p>需要隐藏内容的几种可能性：</p>
+                <p>1）对文本的隐藏</p>
+                <p>2）隐藏超链接（另类黑链）</p>
+                <p>3）对统计代码隐藏</p>
+                <p>4）隐藏超出图片</p>
+                <p>5）css隐藏滚动条</p>
+                <p>6）css隐藏div层</p>
+                <p>具体实现：</p>
+                <p>1、css隐藏DIV及内容，完全隐藏内容与布局。display:none或者visibility:hidden</p>
+                <p>（面试官也许会问到：关于display:none和visible:hidden区别）</p>
+                <p>display:none和visible:hidden都能把网页上某个元素隐藏起来，但两者有区别:</p>
+                <p>display:none ---不为被隐藏的对象保留其物理空间，即该对象在页面上彻底消失，通俗来说就是看不见也摸不到。</p>
+                <p>visible:hidden--- 使对象在网页上不可见，但<strong>该对象在网页上所占的空间没有改变</strong>，通俗来说就是看不见但摸得到。</p>
+                <p>2、通过对象盒子设置缩进样式（text-indent:-9999px）方法可以隐藏超链接文本内容
+                    <br /> 同样道理，可以用来隐藏图片上方文字。此类问题我们常见于LOGO处使用，我们想让图片作为背景，而图片上方放A链接文字内容，但html锚文本功能仍然正常也能鼠标点击使用。图片作为背景而html代码内看不到图片，但文字也存在，却是文字隐藏图片显示出，鼠标也能点击指向。
+                </p>
+                <p>3、overflow: hidden 隐藏溢出DIV内容或图片</p>
+                <p>4、css隐藏滚动条</p>
+                <p>使用overflow-y:hidden;和overflow-x:hidden来隐藏或显示对应横或竖方向的滚动条。</p>
+            </div>
+            <div class="title">22.请解释一下 * { box-sizing: border-box; } 的作用, 并且说明使用它有什么好处？</div>
+            <div class="content">
+                <p>说到 IE 的 bug，在 IE6以前的版本中，IE对盒模型的解析出现一些问题，跟其它浏览器不同，将 border 与 padding 都包含在 width 之内。而另外一些浏览器则与它相反，是不包括border和padding的。对于IE浏览器，当我们设置 box-sizing: content-box; 时，浏览器对盒模型的解释遵从我们之前认识到的 W3C 标准，当它定义width和height时，它的宽度不包括border和padding；对于非IE浏览器，当我们设置box-sizing: border-box; 时，浏览器对盒模型的解释与 IE6之前的版本相同，当它定义width和height时，border和padding则是被包含在宽高之内的。内容的宽和高可以通过定义的“width”和 “height”减去相应方向的“padding”和“border”的宽度得到。内容的宽和高必须保证不能为负，必要时将自动增大该元素border box的尺寸以使其内容的宽或高最小为0。</p>
+                <p>使用 * { box-sizing: border-box; }能够统一IE和非IE浏览器之间的差异。</p>
+            </div>
+            <div class="title">23.请解释一下 inline 和 inline-block，block 的区别？</div>
+            <div class="content">
+                <p>都是display 属性规定元素应该生成的框的类型。但是block代表块级元素，元素前后都有换行符；inline是默认的样式，表示该元素被显示为内联元素，元素前后没有换行符号。也就是说，block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。而inline-block代表行内块元素（css2.0新增）。</p>
+                <p><strong>display:block</strong></p>
+                <p>1）block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</p>
+                <p>2）block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</p>
+                <p>3）block元素可以设置margin和padding属性。</p>
+                <p><strong>display:inline</strong></p>
+                <p>1）inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</p>
+                <p>2）inline元素设置width,height属性无效。</p>
+                <p>3）inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</p>
+                <p><strong>display:inline-block</strong></p>
+                <p>简单来说就是<strong>将对象呈现为inline对象，但是对象的内容作为block对象呈现</strong>。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</p>
+            </div>
+            <div class="title">24.请解释一下 relative、fixed、absolute 和 static 元素的区别</div>
+            <div class="content">
+                <p>在用CSS+DIV进行布局的时候，一直对position的四个属性值relative,absolute,static,fixed分的不是很清楚，以致经常会出现让人很郁闷的结果。今天研究了一下，总算有所了解。在此总结一下：</p>
+                <p>先看下各个属性值的定义：</p>
+                <p>1、static：默认值。没有定位，<strong>元素出现在正常的流中</strong>（忽略 top, bottom, left, right 或者 z-index 声明）。</p>
+                <p>2、relative：<strong>生成相对定位的元素</strong>，通过top,bottom,left,right的设置相对于其正常位置进行定位。可通过z-index进行层次分级。</p>
+                <p>3、absolute：生成绝对定位的元素，<strong>相对于 static 定位以外的第一个父元素进行定位</strong>。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。可通过z-index进行层次分级。</p>
+                <p>4、fixed：生成绝对定位的元素，<strong>相对于浏览器窗口进行定位</strong>。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。可通过z-index进行层次分级。</p>
+                <p>static与fixed的定位方式较好理解，在此不做分析。下面对应用的较多的relative和absolute进行分析：</p>
+                <p>1、relative。定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。</p>
+                <p>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层的位置可以看出其正常位置依然存在。</p>
+                <p>2、absolute。定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。在将黄色背景层定位为absolute后，灰色背景层自动补上。</p>
+                <p>3、relative与absolute的主要区别：</p>
+                <p>首先，是上面已经提到过的在正常流中的位置存在与否。</p>
+                <p>其次，relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式。红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。而如果红色背景层定位为absolute。红色背景层依然定义top:20px；left:20px；但其相对 的元素变为定位方式为absolute或relative的黄色背景层。因此，对于absolute定位的层总是相对于其最近的定义为absolute或 relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</p>
+                <p>除top、left、right、bottom定位外，margin属性值的定义也符合上述规则。</p>
+                <p>&nbsp;</p>
+                <p>static与定位用的比较少，也比较简单，在此不做分析。
+                    <br /> 下面对应用的较多的relative和absolute与fixed进行分析：
+                    <br /> relative定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式。
+                    <br /> absolute定位的层总是相对于其最近的定义为absolute或relative的父层，而这个父层并不一定是其直接父层。如果其父层中都未定义absolute或relative，则其将相对body进行定位，
+                    <br /> fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。
+                </p>
+            </div>
+            <div class="title">25.为什么响应式设计（responsive design）和自适应设计（adaptive design）不同？</div>
+            <div class="content">
+                <p><strong>自适应布局（Adaptive Layout）</strong></p>
+                <p>自适应布局（Adaptive）的特点是分别为不<strong>同的屏幕分辨率定义布局</strong>。布局切换时页面元素发生改变，但在每个布局中，页面元素不随窗口大小的调整发生变化。就是说你看到的页面，里面元素的位置会变化而大小不会变化；</p>
+                <p>你可以把自适应布局看作是静态布局的一个系列。</p>
+                <p><strong>流式布局（Liquid Layout）</strong></p>
+                <p>流式布局（Liquid）的特点（也叫"Fluid") 是<strong>页面元素的宽度按照屏幕进行适配调整</strong>，主要的问题是如果屏幕尺度跨度太大，那么在相对其原始设计而言过小或过大的屏幕上不能正常显示。</p>
+                <p><strong>响应式布局（Responsive Layout）</strong></p>
+                <p>分别为<strong>不同的屏幕分辨率定义布局</strong>，同时，在每个布局中，应用流式布局的理念，即页面元素宽度随着窗口调整而自动适配。</p>
+                <p>可以把响应式布局看作是流式布局和自适应布局设计理念的融合。</p>
+            </div>
+            <div class="title">26.如果设计中使用了非标准的字体，你该如何去实现？</div>
+            <div class="content">
+                <p>1）图片替代</p>
+                <p>2）好是跟产品沟通，尽量使用默认就有的字体。虽然我们可以用webfonts，但它在页面加载的时候会将整个字体包都下载下来，这对于手机端网页来说无疑是致命的。如果产品一定要用非标准字体，可用这个软件FontCreator，可以从一个字体包中将你这个页面需要的那几个字提取出来，打成一个新的字体包，这样会节省很多流量</p>
+                <p>Webfonts (字体服务例如：Google Webfonts，Typekit 等等。)</p>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
