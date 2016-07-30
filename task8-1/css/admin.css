@@ -1,0 +1,28 @@
+/*左边栏*/
+
+.navbar {
+    margin-bottom: 2px;
+    border-radius: 0;
+}
+.sidebar {
+    background-color: #E6E6E6;
+    margin-left: -5px;
+    padding: 0;
+}
+/*左边栏 小屏显示高度*/
+@media (max-width: 768px) {
+    .sidebar {
+        height: 200px;
+        overflow: scroll;
+    }
+}
+
+.main {
+    background-color: #E6E6E6;
+    margin-left: 5px;
+    background-image: url(../images/qiu.png);
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+    background-position: right top;
+}
+
