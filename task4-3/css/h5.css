@@ -1,0 +1,408 @@
+ * {
+     padding: 0;
+     margin: 0;
+ }
+ 
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     background: #eeeff0;
+     overflow-x: hidden;
+ }
+ 
+ ol,
+ ul {
+     list-style: none;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ 
+ @font-face {
+     font-family: 'icons';
+     src: url(../iconfont/iconfont_4b821977.eot);
+     src: url(../iconfont/iconfont_4b821977.eot#iefix) format('embedded-opentype'), url(../iconfont/iconfont_4b821977.woff) format('woff'), url(../iconfont/iconfont_4b821977.ttf) format('truetype'), url(../iconfont/iconfont_4b821977.svg?#iconfont) format('svg');
+     font-weight: normal;
+     font-style: normal
+ }
+
+#container_pc {
+     display: none;
+ }
+ 
+ #container_h5 {
+     width: 100%;
+     height: auto;
+     position: relative;
+ }
+ 
+ #weather {
+     text-align: left;
+     height: 40px;
+     line-height: 40px;
+ }
+ 
+ #weather .icon-weather-default {
+     font-family: icons;
+     display: inline-block;
+     color: #b7babe;
+     font-size: 28px;
+     position: relative;
+     top: 3px;
+     width: auto;
+     line-height: 35px;
+ }
+ 
+ #weather .weather-num {
+     display: inline-block;
+     font-size: 20px;
+     color: #8c8c8c;
+ }
+ 
+ #weather .weather-status {
+     display: inline-block;
+     position: relative;
+     top: 3px;
+     padding: 0 2px 0 7px;
+ }
+ 
+ #weather .weather-status p {
+     height: 13px;
+     line-height: 13px;
+     font-size: 11px;
+     color: #999;
+ }
+ 
+ #weather .icon-down {
+     font-family: icons;
+     font-style: normal;
+     vertical-align: bottom;
+     height: 34px;
+ }
+ 
+ #weather .icon-down:before {
+     content: '\e814';
+     color: #b6b7ba;
+     font: 17px/1 icons;
+ }
+ 
+ #userinfo-wrap .icon-login {
+     font-family: icons;
+     font-style: normal;
+     position: absolute;
+     top: 5px;
+     right: 50px;
+     color: #9b9b9b;
+     font-size: 28px;
+     line-height: 20px;
+ }
+ 
+ #userinfo-wrap .icon-login:before {
+     content: '\e809';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ #skin {
+     position: absolute;
+     top: 5px;
+     right: 10px;
+     padding: 3px;
+     color: #9b9b9b;
+     font-size: 28px;
+     line-height: 20px;
+     z-index: 1;
+ }
+ 
+ #skin i {
+     font-family: icons;
+     font-style: normal;
+ }
+ 
+ #skin i:before {
+     content: '\e824';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ #logo {
+     height: 55px;
+     padding: 17px 0 15px;
+ }
+ 
+ #index-form {
+     margin-top: 0 10px;
+     height: 42px;
+     background: #fff;
+     border: 1px solid #949494;
+     border-bottom-color: #bcbcbc;
+ }
+ 
+ #index-form .con-wrap {
+     display: -webkit-box;
+     width: 100%;
+ }
+ 
+ #index-form .se-input {
+     border-radius: 0;
+     margin: 0;
+     padding: 7px 42px 7px 6px;
+     height: 25px;
+     line-height: 28px;
+     resize: none;
+     overflow: hidden;
+     display: block;
+     -webkit-box-flex: 1;
+     font-size: 18px;
+ }
+ 
+ #index-form .se-inner {
+     width: 82px;
+     position: relative;
+ }
+ 
+ #index-bn {
+     position: absolute;
+     top: -1px;
+     right: -1px;
+     width: 82px;
+     height: 42px;
+     background: #38f;
+     color: #fff;
+     white-space: nowrap;
+     line-height: 42px;
+     letter-spacing: -1px;
+     font-size: 16px;
+     border-top: 1px solid #38f;
+     border-bottom: 1px solid #38f;
+     box-sizing: inherit;
+ }
+ 
+ #navs {
+     margin: 17px 0 14px;
+     overflow: hidden;
+ }
+ 
+ #navs a:first-child,
+ #navs a:nth-child(7) {
+     margin-left: 2%;
+ }
+ 
+ #navs a {
+     float: left;
+     width: 16%;
+     font-size: 12px;
+     color: #666;
+     padding-bottom: 20px;
+ }
+ 
+ #navs a i {
+     display: block;
+     margin-bottom: 4px;
+     height: 24px;
+ }
+ 
+ .navs-news:before {
+     content: '\e799';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-novel:before {
+     content: '\e801';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-video:before {
+     content: '\e802';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-life:before {
+     content: '\e831';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-map:before {
+     content: '\e804';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ #navs.expand .navs-more:before {
+     content: '\e813';
+ }
+ 
+ .navs-more:before {
+     content: '\e812';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-tieba:before {
+     content: '\e806';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-image:before {
+     content: '\e811';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-website:before {
+     content: '\e807';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ .navs-extend:before {
+     content: '\e808';
+     color: #666;
+     font: 24px/1 icons;
+ }
+ 
+ #plus-card {
+     position: relative;
+     padding: 0 8px 10px;
+ }
+ 
+ .plus {
+     margin-top: 8px;
+     background: #fff;
+ }
+ 
+ .plus-title {
+     position: relative;
+     margin: 2px 14px 0;
+     height: 40px;
+     text-align: left;
+ }
+ 
+ .plus-title h2 {
+     line-height: 40px;
+     font-size: 15px;
+     font-weight: normal;
+     color: #999;
+ }
+ 
+ .plus-content {
+     display: block;
+     overflow: hidden;
+     margin-top: -5px;
+     font-size: 14px;
+ }
+ 
+ #nav-list a {
+     float: left;
+     display: block;
+     position: relative;
+     box-sizing: border-box;
+     padding: 0 6px;
+     width: 25%;
+     height: 42px;
+     line-height: 42px;
+ }
+ 
+ .plus-content a {
+     color: #262626;
+ }
+ 
+ #plus-card .icon-add {
+     font-family: icons;
+     font-style: normal;
+     font-size: 24px;
+     color: #B6B7BA;
+ }
+ 
+ #admin {
+     padding: 0 8px;
+     line-height: 45px;
+     height: 45px;
+     color: #333;
+     font-size: 14px;
+     text-indent: -8px;
+     background: #fff;
+     background-clip: content-box;
+ }
+ 
+ .cbh62 {
+     margin: 0 28px;
+ }
+ 
+ .cbh62 li {
+     height: 33px;
+     line-height: 33px;
+     text-align: left;
+ }
+ 
+ .cbh62 a {
+     position: relative;
+     height: 33px;
+     overflow: hidden;
+     display: block;
+     padding-left: 21px;
+     font-size: 13px;
+     color: #555;
+     background: none no-repeat 0 center;
+ }
+ 
+ .cbh62 .hotIcon a:after {
+     content: '\e626';
+     position: absolute;
+     top: 6px;
+     left: -3px;
+     font: 21px/1 icons;
+     color: #ed5353;
+ }
+ 
+ .cbh62 .baiduIcon a {
+     background-image: url(../img/w_icon2.png);
+     background-size: 15px 15px;
+ }
+ 
+ #foot {
+     margin: 10px 28px 0;
+ }
+ 
+ #foot div {
+     overflow: hidden;
+     text-align: center;
+ }
+ 
+ #foot div a {
+     position: relative;
+     display: inline-block;
+     height: 34px;
+     width: 95px;
+     line-height: 34px;
+     color: #666;
+     font-size: 13px;
+ }
+ 
+ #foot div a .icon-feedback {
+     position: absolute;
+     top: 8px;
+     left: 0;
+     display: inline-block;
+     width: 16px;
+     height: 16px;
+     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAlUlEQ…h6oHRXo6jLOCGoudTaGrQ8GoZHOHplmmFmy5nO29kjEfgFKVQDsNj13egAAAAASUVORK5CYII=) no-repeat;
+     background-size: 100% 100%;
+     vertical-align: middle;
+ }
+ 
+ #index-copyright,
+ .recordcode {
+     display: block;
+     font-size: 12px;
+     height: 20px;
+     line-height: 20px;
+     padding: 6px 0 0;
+     color: #999;
+ }

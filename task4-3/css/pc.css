@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+}
+
+input {
+    border: 0;
+}
+
+#container_h5 {
+    display: none;
+}
+
+#u1 {
+    z-index: 2;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 19px 15px 35px 0;
+    overflow: hidden;
+}
+
+#u1 a:hover {
+    color: #00c;
+}
+
+#u1 a {
+    float: left;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 20px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+#u1 .setting-menu {
+    position: absolute;
+    width: 46px;
+    height: 24px;
+    right: 90px;
+    background: red;
+    border: 1px solid red;
+}
+
+#u1 .setting-menu .baidu-setting {
+    display: block;
+}
+
+#u1 .setting-menu .baidu-setting a {
+    display: block;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    padding: 10px;
+    background: red;
+}
+
+.bri {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 58px;
+    height: 23px;
+    float: left;
+    color: white;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 1px solid #38f;
+    margin-top: 19px;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+.bdpfmeun {
+    display: none;
+    left: 770px;
+    top: 48px;
+    width: 70px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    position: absolute;
+    z-index: 302;
+}
+
+.bdpfmeun a {
+    color: #333;
+    text-align: left;
+    padding: 0 9px;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+#main {
+    margin-top: 100px;
+}
+
+.s_wrap {
+    display: inline-block;
+    width: 539px;
+    height: 34px;
+    position: relative;
+    border: 1px solid #b6b6b6;
+    vertical-align: top;
+    background: #fff;
+}
+
+.s_ipt {
+    width: 526px;
+    height: 22px;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.s_upload {
+    z-index: 1;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    margin-top: -8px;
+    height: 16px;
+    width: 18px;
+    background: #fff url(../img/camera.png) no-repeat;
+}
+
+.ipt_rec {
+    z-index: 1;
+    position: absolute;
+    height: 34px;
+    width: 24px;
+    background: url(../img/ipt.png) no-repeat center;
+    background-size: 13px 18px;
+    background-position: 0 50%;
+    cursor: pointer;
+    right: 41px;
+    top: inherit;
+}
+
+.ipt_rec:after {
+    content: "";
+    display: inline-block;
+    height: 14px;
+    width: 0;
+    border-left: 1px solid #e7e7e7;
+    margin: 10px 0 10px 24px;
+}
+
+.s_btn {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#ftCon {
+    height: 100px;
+    position: absolute;
+    bottom: 23px;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.ftCon_Wrapper {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+#qrcode .qrcode-item {
+    float: left;
+}
+
+#qrcode .qrcode-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+#qrcode .qrcode-item-1 .qrcode-img {
+    background-image: url(../img/zbios_x1.png);
+    background-size: 60px 60px;
+}
+
+#qrcode .qrcode-text {
+    float: left;
+    color: #999;
+    line-height: 23px;
+    margin: 8px 0 0 10px;
+}
+
+#qrcode .qrcode-text b {
+    color: #666;
+}
+
+#qrcode .qrcode-item-2 {
+    margin-left: 33px;
+}
+
+#qrcode .qrcode-item-2 .qrcode-img {
+    background-image: url(../img/nuomi_x2.png);
+    background-size: 60px 60px;
+}
+
+#ftConw,
+#ftConw a {
+    color: #999;
+}
+
+#ftConw {
+    display: inline-block;
+    text-align: left;
+    margin-left: 32px;
+    line-height: 22px;
+    position: relative;
+    top: -2px;
+}
+
+#lh a {
+    margin-left: 62px;
+}
+
+#lh #setf {
+    margin-left: 0;
+}
+
+#cp .c-icon-icrlogo,
+#jgwab .c-icon-jgwablogo {
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../img/icons.png) no-repeat;
+}
+
+#cp .c-icon-icrlogo {
+    background-position: -600px -96px;
+    position: relative;
+    top: 3px;
+}
+
+#jgwab .c-icon-jgwablogo {
+    background-position: -623px -96px;
+    position: relative;
+    top: 3px;
+    margin-right: 6px;
+}
+
+.bdbri {
+    width: 85px;
+    min-height: 100px;
+    border-left: 1px solid #e7e7e7;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    z-index: 2;
+    right: 0;
+    top: 0;
+}
+
+.bdbriimgtitle {
+    color: #333;
+    text-align: center;
+    width: 66px;
+    height: 43px;
+    line-height: 43px;
+    padding-top: 9px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    cursor: default;
+}
+
+.briscrollwrapperContainer {
+    position: relative;
+}
+
+.briscrollwrapper {
+    height: 632px;
+    overflow: hidden;
+}
+
+.bdbri.bdbriimg .bdmainlink a {
+    display: block;
+    text-align: center;
+    width: 66px;
+    height: 76px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f0f0f0;
+    color: #666;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.bdbri.bdbriimg span {
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 10px auto 5px;
+    background: url(../img/bdbri_icons.png) no-repeat;
+    cursor: pointer;
+}
+
+.bdbri.bdbriimg span.bdbriimgitem_2 {
+    background-position: -36px 0;
+}
+
+.bdbri.bdbriimg span.bdbriimgitem_3 {
+    width: 40px;
+    background-position: -72px 0;
+}
+
+.bdbri.bdbriimg span.bdbriimgitem_4 {
+    background-position: -112px 0;
+}
+
+.bdbri.bdbriimg span.bdbriimgitem_5 {
+    background-position: -148px 0;
+}
+
+.bdbri.bdbriimg span.bdbriimgitem_6 {
+    background-position: -184px 0;
+}
+
+.bdbri.bdbriimg span.bdbriimgitem_7 {
+    background-position: -220px 0;
+}
