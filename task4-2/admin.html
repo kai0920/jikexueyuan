@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理界面</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            
+            <div class="navbar-header">
+            <!--响应式菜单栏 三条横线-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MyDashboard</a>
+            </div>
+           
+            <div class="collapse navbar-collapse navbar-right">
+                
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome! Kai <span class="caret"></span></a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul> -->
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- 分页 -->
+    <div class="container-fluid">
+    <!-- 左边栏 -->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Dashboard</a>
+                <a href="#" class="list-group-item ">Charts</a>
+                <a href="#" class="list-group-item ">Tables</a>
+                <a href="#" class="list-group-item ">Statistics</a>
+                <a href="#" class="list-group-item ">tasks</a>
+                <a href="#" class="list-group-item ">tasks1</a>
+                <a href="#" class="list-group-item ">tasks2</a>
+                <a href="#" class="list-group-item ">tasks3</a>
+                <a href="#" class="list-group-item ">tasks4</a>
+                <a href="#" class="list-group-item ">tasks5</a>
+                <a href="#" class="list-group-item ">tasks4</a>
+            </div>
+        </div>
+        <!-- 右边栏 -->
+        <div class="col-sm-9 col-md-10 main">
+            <h1 class="page-header">Dashboard Overview</h1>
+            <div class="panel panel-default">
+                
+                <div class="panel-heading">Dashboard</div>
+                <div class="panel-body">
+                    <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </div>
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tasks</th>
+                            <th>content</th>
+                            <th>status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active">
+                            <td>CSS3</td>
+                            <td>Learn how to use css3</td>
+                            <td>finished</td>
+                        </tr>
+                        <tr class="success">
+                            <td>html5</td>
+                            <td>hellow</td>
+                            <td>finished</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>bootstrap</td>
+                            <td>html5</td>
+                            <td>unfinished</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>bootstrap</td>
+                            <td>html5</td>
+                            <td>unfinished</td>
+                        </tr>
+                        <tr class="info">
+                            <td>bootstrap</td>
+                            <td>html5</td>
+                            <td>unfinished</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+
+</html>

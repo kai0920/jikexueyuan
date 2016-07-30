@@ -1,0 +1,32 @@
+body {
+    background: #E6E6E6;
+    background-image: url(../img/qiu.png);
+    background-repeat: no-repeat;
+}
+/*表单*/
+.form-signin {
+    width: 350px;
+    height: 300px;
+    padding: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -150px;
+    text-align: center;
+}
+/*输入框*/
+.form-signin .form-control {
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+}
+/*输入框*/
+.form-signin input:focus {
+    background-color: #E8EC63;
+}
+
+h2 {
+    font-weight: bolder;
+}
