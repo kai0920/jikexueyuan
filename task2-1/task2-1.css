@@ -1,0 +1,56 @@
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -155px;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 7px 3px #A9A9A9;
+}
+
+.item1 {
+    left: 105px;
+    top: 0;
+    background-color: green;
+}
+
+.item2 {
+    left: 0;
+    top: 105px;
+    background-color: blue;
+}
+
+.item3 {
+    left: 105px;
+    top: 105px;
+    box-shadow:0 0 7px 3px #A9A9A9 inset;
+    text-align: center;
+    line-height: 100px;
+}
+
+.item3 img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.item4 {
+    left: 210px;
+    top: 105px;
+    background-color: red;
+}
+
+.item5 {
+    left: 105px;
+    top: 210px;
+    background-color: yellow;
+}
