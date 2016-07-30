@@ -1,0 +1,59 @@
+body {
+    background-image: url(./beijing.gif);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 700px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.content {
+    margin: 0 auto;
+    line-height: 150%;
+    font-size: 12px;
+    width: 650px;
+}
+
+.content a {
+    color: #FF0099;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    border: 1px solid #999;
+}
+
+td {
+    padding: 1px 2px;
+}
+
+table .right {
+    text-align: right;
+}
+
+table .red {
+    color: red;
+}
+
+table .blue {
+    color: blue;
+}
+
+table .title td {
+    background-color: #EEEEEE;
+    color: #003399;
+    font-size: 13px;
+}
