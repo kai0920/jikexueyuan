@@ -1,0 +1,269 @@
+.wrapper {
+    margin: 50px 0 0 500px;
+}
+
+.doraemon {
+    position: relative;
+}
+
+.doraemon .head {
+    width: 320px;
+    height: 300px;
+    border-radius: 150px;
+    background: #07bbee;
+    border: 2px solid #555;
+}
+
+.doraemon .face {
+    position: relative;
+    z-index: 2;
+}
+
+.doraemon .face .white {
+    width: 265px;
+    height: 195px;
+    border-radius: 150px;
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    background: #fff;
+}
+
+/*鼻子*/
+.doraemon .face .nose {
+    width: 20px;
+    height: 30px;
+    border-radius: 15px;
+    background: #c93300;
+    border: 2px solid #000;
+    position: absolute;
+    top: 110px;
+    left: 145px;
+    z-index: 3;
+}
+
+.doraemon .face .nose .light {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 8px 5px #fff;
+}
+
+.doraemon .face .nose_line {
+    width: 3px;
+    height: 100px;
+    background: #333;
+    position: absolute;
+    top: 143px;
+    left: 155px;
+    z-index: 3;
+}
+
+ /*嘴巴*/
+.doraemon .face .mouth {
+    width: 220px;
+    height: 400px;
+    border-bottom: 3px solid #333;
+    border-radius: 120px;
+    position: absolute;
+    top: -160px;
+    left: 45px;
+}
+
+/*眼睛*/
+.doraemon .eyes {
+    position: relative;
+    z-index: 3;
+}
+
+.doraemon .eyes .eye {
+    width: 72px;
+    height: 82px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 35px 35px;
+    position: absolute;
+    top: 40px;
+}
+
+/*眼珠*/
+.doraemon .eyes .eye .black {
+    width: 14px;
+    height: 14px;
+    background: #000;
+    border-radius: 7px;
+    position: absolute;
+    top: 40px;
+    -webkit-animation: eyemove 3s linear infinite;
+    -moz-animation: eyemove 3s linear infinite;
+    -ms-animation: eyemove 3s linear infinite;
+    -o-animation: eyemove 3s linear infinite;
+    animation: eyemove 3s linear infinite;
+}
+
+.doraemon .eyes .left {
+    left: 82px;
+}
+
+.doraemon .eyes .right {
+    left: 156px;
+}
+
+.doraemon .eyes .eye .bleft {
+    left: 50px;
+}
+
+.doraemon .eyes .eye .bright {
+    left: 7px;
+}
+
+.doraemon .whiskers {
+    width: 220px;
+    height: 80px;
+    background: #fff;
+    border-radius: 15px;
+    position: absolute;
+    top: 120px;
+    left: 45px;
+    z-index: 2;
+}
+
+.doraemon .whiskers .whisker {
+    width: 60px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    z-index: 2;
+}
+
+.doraemon .whiskers .rTop {
+    left: 165px;
+    top: 25px;
+}
+
+.doraemon .whiskers .rMiddle {
+    left: 167px;
+    top: 45px;
+}
+
+.doraemon .whiskers .rBottom {
+    left: 165px;
+    top: 65px;
+}
+
+.doraemon .whiskers .lTop {
+    left: 0;
+    top: 25px;
+}
+
+.doraemon .whiskers .lMiddle {
+    left: -2px;
+    top: 45px;
+}
+
+.doraemon .whiskers .lBottom {
+    left: 0;
+    top: 65px;
+}
+
+.doraemon .whiskers .r160 {
+    -webkit-transform: rotate(160deg);
+    -moz-transform: rotate(160deg);
+    -ms-transform: rotate(160deg);
+    -o-transform: rotate(160deg);
+    transform: rotate(160deg);
+}
+
+.doraemon .whiskers .r20 {
+    -webkit-transform: rotate(200deg);
+    -moz-transform: rotate(200deg);
+    -ms-transform: rotate(200deg);
+    -o-transform: rotate(200deg);
+    transform: rotate(200deg);
+}
+
+
+/*让眼睛动起来*/
+@-webkit-keyframes eyemove {
+    70% {
+        margin: 0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    }
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
+
+@-moz-keyframes eyemove {
+    70% {
+        margin: 0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    }
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
+
+@-o-keyframes eyemove {
+    70% {
+        margin: 0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    }
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
+
+@keyframes eyemove {
+    70% {
+        margin: 0 0 0 0;
+    }
+    80% {
+        margin: -22px 0 0 0;
+    }
+    85% {
+        margin: -22px 0 0 5px;
+    }
+    90% {
+        margin: -22px 10px 0 0;
+    }
+    93% {
+        margin: -22px 0 0 0;
+    }
+    96% {
+        margin: 0 0 0 0;
+    }
+}
